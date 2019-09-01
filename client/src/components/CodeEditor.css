@@ -31,8 +31,19 @@ h3 {
   font-weight: 600;
 }
 
+.ace-monokai {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.ace_gutter {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .ace-monokai .ace_gutter {
   background: rgba(0, 0, 0, 0.5);
+}
+
+.ace_gutter-layer {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .editor {
