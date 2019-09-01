@@ -1,0 +1,19 @@
+{
+  "name": "codio",
+  "version": "1.0.0",
+  "description": "An online IDE with real time rendering",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdamin/codio.git"
+  },
+  "author": "Abdullah Amin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdamin/codio/issues"
+  },
+  "homepage": "https://github.com/abdamin/codio#readme"
+}
