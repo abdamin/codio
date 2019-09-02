@@ -92,7 +92,7 @@ h1.style.color = "white";
     return (
       <div>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 pr-0">
             <div className="editor">
               <div className="type">
                 <h3>HTML</h3>
@@ -112,12 +112,12 @@ h1.style.color = "white";
                 value={this.state.html}
                 style={{
                   backgroundColor: "rgba(0,0,0,0.4)",
-                  boxShadow: "2px 2px rgba(0,0,0,0.5)"
+                  boxShadow: "0px 3px rgba(0,0,0,0.9)"
                 }}
               />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 p-0">
             <div className="editor">
               <div className="type">
                 <h3>CSS</h3>
@@ -138,12 +138,12 @@ h1.style.color = "white";
                 id="css"
                 style={{
                   backgroundColor: "rgba(0,0,0,0.4)",
-                  boxShadow: "2px 2px rgba(0,0,0,0.5)"
+                  boxShadow: "0px 3px rgba(0,0,0,0.9)"
                 }}
               />
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 pl-0">
             <div className="editor">
               <div className="type">
                 <h3>JavaScript</h3>
@@ -163,7 +163,7 @@ h1.style.color = "white";
                 value={this.state.javascript}
                 style={{
                   backgroundColor: "rgba(0,0,0,0.4)",
-                  boxShadow: "2px 2px rgba(0,0,0,0.5)"
+                  boxShadow: "0px 3px rgba(0,0,0,0.9)"
                 }}
               />
             </div>
