@@ -55,7 +55,7 @@ class App extends Component {
             boxShadow: " 0 3px 5px rgb(0,0,0)"
           }}
         >
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <img
               src={logo}
               width="40"
