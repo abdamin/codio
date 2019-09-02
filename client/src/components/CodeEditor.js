@@ -40,14 +40,24 @@ h1.style.color = "white";
   setIframeContent = (html, css, js) => {
     const source = `
       <html>
-        <head><style>${css}</style></head>
+        <head>
+          <style>
+            ${css}
+          </style>
+        </head>
         <body>
           ${html}
-          <script>${js}</script>
+          <script>
+            ${js}
+          </script>
         </body>
       </html>
     `;
     this.setState({ finalCode: source });
+
+    if (this.state.finalCode !== "") {
+      this.props.changeFileCode(this.state.finalCode);
+    }
   };
 
   onChangeHTML = newValue => {

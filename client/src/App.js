@@ -4,9 +4,48 @@ import CodeEditor from "./components/CodeEditor";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFile, faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import logo from "./assets/logo/codio.png";
+const FileDownload = require("js-file-download");
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      code: `
+      <html>
+        <head>
+          <style>
+            /*CSS*/
+
+            body {
+              background-color: black;
+              text-align: center;
+            }
+          </style>
+        </head>
+        <body>
+          <!--HTML-->
+
+          <h1>
+            Hello World
+          </h1>  
+
+          <script>
+            /*JavaScript*/
+
+            var h1 = document.querySelector("body");
+            h1.style.color = "white";
+          </script>
+        </body>
+      </html>
+    `
+    };
+  }
+
+  changeFileCode = updatedCode => {
+    this.setState({ code: updatedCode });
+  };
   render() {
+    console.log(this.state.code);
     return (
       <div>
         <nav
@@ -55,7 +94,11 @@ class App extends Component {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a
+                  className="nav-link"
+                  href={"#"}
+                  onClick={() => FileDownload(this.state.code, "project.html")}
+                >
                   <FontAwesomeIcon icon={faFileDownload} />
                   {" Download"}
                 </a>
@@ -63,7 +106,7 @@ class App extends Component {
             </ul>
           </div>
         </nav>
-        <CodeEditor />
+        <CodeEditor changeFileCode={this.changeFileCode} />
       </div>
     );
   }
